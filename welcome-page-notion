@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome, Kaubanski</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #welcome-message {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-message">Welcome, Kaubanski</div>
+    <script>
+        const messages = [
+            "Welcome, Kaubanski",
+            "Bienvenido, Kaubanski",
+            "Bienvenue, Kaubanski",
+            "Willkommen, Kaubanski",
+            "Benvenuto, Kaubanski",
+            "欢迎，Kaubanski",
+            "ようこそ, Kaubanski"
+        ];
+        let index = 0;
+
+        function changeMessage() {
+            index = (index + 1) % messages.length;
+            document.getElementById("welcome-message").innerText = messages[index];
+        }
+
+        setInterval(changeMessage, 3000);
+    </script>
+</body>
+</html>
